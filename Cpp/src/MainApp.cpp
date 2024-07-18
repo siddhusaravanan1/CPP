@@ -1,17 +1,22 @@
-#include "iostream"
-#include "string"
+#include "Log.h"
+
+void returnfunc(int& value)
+{
+	value++;
+}
 
 int main()
 {
-	unsigned int variable = 10;
+	int var = 8;
+	int* ptr = &var;
+	*ptr = 10;
 
-	std::string message = "value is ";
+	int** vert = &ptr;
 
-	char dot = '.';
+	std::cout << *ptr << std::endl;
 
-	variable = 3;
-	std::cout << message << variable << dot << std::endl;
+	returnfunc(var);
 
-	variable = -1;
-	std::cout << message << variable << dot << std::endl;
+	std::cout << var << std::endl;
+	returnValue(10);
 }
